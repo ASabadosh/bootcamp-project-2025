@@ -33,10 +33,14 @@ Blogs.forEach((blog) => {
   image.alt = blog.imageAlt;
 	// Logic for creating and appending blog elements...
     const newDiv = document.createElement("div");
+    newDiv.id = "blog_item";
     const title = document.createElement("h1");
     title.textContent = blog.title
     const description = document.createElement("p");
+    const newLink = document.createElement('a');
+    newLink.href = blog.slug
     description.textContent = blog.description
+    description.appendChild(newLink);
     const date = document.createElement("p");
     date.textContent = blog.date
     newDiv.append(title)

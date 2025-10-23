@@ -157,3 +157,24 @@ border: 30px solid rgb(164, 26, 26);
 .resume ul{
    color: white;
 }
+
+#blog-container{
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+  justify-content: center;
+  gap: 15px;
+}
+
+#blog_item{
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+  justify-content: center;
+  background-color: black;
+  gap: 15px;
+}
+
+.baseball_paragraph, .surfing_paragraph{
+  max-width: 600px;
+}
