@@ -16,7 +16,11 @@ const Blogs = [
         slug: "surfing.html"
     },
 ];
+
 const blogContainer = document.getElementById('blog-container');
+/* Below arrow method creates div and then appends image, description, etc. before 
+appending div to blogContainer in blog.html
+*/
 Blogs.forEach((blog) => {
     const image = document.createElement("img");
     image.src = blog.image;
