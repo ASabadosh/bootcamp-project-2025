@@ -1,4 +1,4 @@
-type Blog = {
+export type Blog = {
   title: string 
   date: string;
   description: string
@@ -7,7 +7,7 @@ type Blog = {
   slug: string 
 };
 
-const Blogs: Blog[] = [
+const blogs: Blog[] = [
     {
         title: "The sport of baseball",
         date: "10/15/25",
@@ -25,3 +25,5 @@ const Blogs: Blog[] = [
         slug: "surfing.html"
     },
 ]
+
+export default blogs;
