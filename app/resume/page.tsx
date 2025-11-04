@@ -3,11 +3,11 @@ import styles from "./resume.module.css";
 export default function HomePage() {
   return (
 <main>
-        <h1 className="resume">
+        <h1 className={styles.resume}>
           Resume
         </h1>
-        <a href="resume (13).pdf" download >Download Resume</a>
-        <div className="resume">
+        <a href="/Resume (13).pdf" download >Download Resume</a>
+        <div className={styles.resume}>
       <section className="education">
         <h2 className="education title">
           Education
