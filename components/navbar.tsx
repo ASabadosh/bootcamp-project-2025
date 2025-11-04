@@ -15,8 +15,8 @@ export default function Navbar() {
       <Link href="index.html">Avi's Personal Website</Link>
     </h1>
     <ul className="nav-list">
-        <li> <Link href="index.html">Home</Link></li>
-        <li><Link href="blog.html">Blog</Link></li>
+        <li> <Link href="/">Home</Link></li>
+        <li><Link href="/blog">Blog</Link></li>
         <li><Link href="portfolio.html">Portfolio</Link></li>
         <li><Link href="resume.html">Resume</Link></li>
         <li><Link href="contact.html">Contact</Link></li>
