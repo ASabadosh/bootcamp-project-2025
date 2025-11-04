@@ -21,7 +21,7 @@
   /* border: solid red; */
 }
 
-navbar a {
+.navbar a {
   color: white;
   font-weight: bold;
   margin: 0 12px;
@@ -37,7 +37,7 @@ navbar a {
   font-size: 20px;
 }
 
-.nav-list {
+.navlist {
   display: flex;
   flex-direction: row;
   position: relative;

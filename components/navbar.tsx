@@ -1,5 +1,5 @@
 import React from "react";
-import style from "./navbar.module.css";
+import styles from "./navbar.module.css";
 import Link from "next/link";
 
 export default function Navbar() {
@@ -10,12 +10,12 @@ export default function Navbar() {
     // change all the "class" to "className"
     <header>
       <h1> Avi's Personal Website </h1>
-      <nav className="navbar">    
-    <h1 className="logo">
+      <nav className={styles.navbar}>    
+    <h1 className={styles.logo}>
       <Link href="index.html">Avi's Personal Website</Link>
     </h1>
-    <ul className="nav-list">
-        <li> <Link href="/">Home</Link></li>
+    <ul className={styles.navlist}>
+        <li> <Link href="">Home</Link></li>
         <li><Link href="/blog">Blog</Link></li>
         <li><Link href="portfolio.html">Portfolio</Link></li>
         <li><Link href="resume.html">Resume</Link></li>
