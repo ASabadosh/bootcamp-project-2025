@@ -14,7 +14,7 @@ const blogs: Blog[] = [
         description: "Learn about the history of baseball!",
         image: "baseball.jpeg",
         imageAlt: "image of baseball",
-        slug: "baseball.html"
+        slug: "/baseball.html"
     },
     {
         title: "The sport of surfing",
@@ -22,7 +22,7 @@ const blogs: Blog[] = [
         description: "Learn about the history of surfing",
         image: "surfing.jpeg",
         imageAlt: "person riding wave on surfboard",
-        slug: "surfing.html"
+        slug: "/surfing.html"
     },
 ]
 
