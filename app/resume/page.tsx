@@ -1,6 +1,6 @@
 import styles from "./resume.module.css";
 
-export default function HomePage() {
+export default function ResumePage() {
   return (
 <main>
         <h1 className={styles.resume}>
