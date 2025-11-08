@@ -24,3 +24,7 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.baseball_paragraph, .surfing_paragraph{
+  max-width: 600px;
+}
