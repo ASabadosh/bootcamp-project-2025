@@ -12,17 +12,17 @@ const blogs: Blog[] = [
         title: "The sport of baseball",
         date: "10/15/25",
         description: "Learn about the history of baseball!",
-        image: "baseball.jpeg",
+        image: "/baseball.jpeg",
         imageAlt: "image of baseball",
-        slug: "/baseball.html"
+        slug: "/baseball"
     },
     {
         title: "The sport of surfing",
         date: "10/15/25",
         description: "Learn about the history of surfing",
-        image: "surfing.jpeg",
+        image: "/surfing.jpeg",
         imageAlt: "person riding wave on surfboard",
-        slug: "/surfing.html"
+        slug: "/surfing"
     },
 ]
 

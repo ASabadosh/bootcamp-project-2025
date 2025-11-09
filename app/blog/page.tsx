@@ -9,7 +9,8 @@ export default function BlogPage() {
         </h1>
         {blogs.map(blog => 
       <BlogPreview // This is how we call the component
-     
+      
+      key = {blog.slug}
       title={blog.title}
       description={blog.description}
       image={blog.image}
