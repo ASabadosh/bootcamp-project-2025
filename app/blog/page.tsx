@@ -1,5 +1,6 @@
 import BlogPreview from '@/components/blogPreview';
 import blogs from "../blogData";
+import styles from "./blog.module.css";
 
 export default function BlogPage() {
   return (
@@ -7,6 +8,7 @@ export default function BlogPage() {
         <h1 className="blog">
           Blog
         </h1>
+        <div className = {styles.blogContainer}>
         {blogs.map(blog => 
       <BlogPreview // This is how we call the component
       
@@ -20,6 +22,7 @@ export default function BlogPage() {
      
       />
 		)}
+    </div>
     </main>
 );
 }
