@@ -7,24 +7,26 @@ export default function ContactPage() {
         </h1>
         <form id="contact-form">
 
-        <div className={styles.input}>
-        <label htmlFor="name">Name</label>
-        <input type="text" id="name" name="name"/>
-        </div>
         
         <div className={styles.input}>
-        <label htmlFor="email">Email</label>
-        <input type="email" id="email" name="email"/>
+        <label className = {styles.label} htmlFor="name">Name</label>
+        <input className = {styles.area} type="text" id="name" name="name"/>
+        </div>
+       
+        
+        <div className={styles.input}>
+        <label className = {styles.label} htmlFor="email">Email</label>
+        <input className = {styles.area} type="email" id="email" name="email"/>
         </div>
 
         <div className={styles.input}>
-        <label htmlFor="message">Message</label>
-        <textarea id="message" name="message">
+        <label className = {styles.label} htmlFor="message">Message</label>
+        <textarea className = {styles.area} id="message" name="message">
         </textarea>
         </div>
 
         <div className={styles.input}>
-        <input type="submit"/>
+        <input className = {styles.label} type="submit"/>
         </div>
 
         </form>
