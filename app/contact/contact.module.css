@@ -1,0 +1,22 @@
+.input {
+  display: flex;
+  flex-direction: horizontal; 
+  gap: 15px;   
+  margin-bottom: 20px;
+  align-items: center; 
+  justify-content: center;
+}
+
+label {
+  font-family: "Open Sans";
+  color: white;
+}
+
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 200px;
+  padding: 10px;
+  font-size: 20px;
+}
