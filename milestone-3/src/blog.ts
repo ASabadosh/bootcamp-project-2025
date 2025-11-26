@@ -1,3 +1,4 @@
+// page not used any more
 type Blog = {
   title: string 
   date: string;
