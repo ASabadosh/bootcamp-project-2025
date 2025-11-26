@@ -33,6 +33,7 @@ export default async function BlogPage() {
       slug={blog.slug}
       comments={blog.comments}
       content={blog.content}
+      content_title = {blog.content_title}
      
       />
 		)}
