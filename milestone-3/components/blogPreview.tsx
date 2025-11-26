@@ -12,10 +12,9 @@ export default function BlogPreview(props: Blog) {
       <h3> {props.title} </h3>
       <div>
         <p>Convert date field to string</p>
-        <p>{props.content}</p>
 		// we will replace img with Image, made to optimize images produced with Next.js
 		<Image src={props.image} alt={props.image_alt} width={500} height={500}/>
-        <Link href={props.slug}>{props.description}</Link>
+        <Link href={`/blog/${props.slug}`}>{props.description}</Link>
       </div>
 	  </div>
   );

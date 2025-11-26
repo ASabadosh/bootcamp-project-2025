@@ -1,3 +1,4 @@
+//page not used
 export type Blog = {
   title: string 
   date: string;
