@@ -1,3 +1,4 @@
+//connectDB method that is imported in getBlogs
 // db.ts
 import mongoose from "mongoose";
 
