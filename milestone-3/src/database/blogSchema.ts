@@ -1,4 +1,12 @@
 import mongoose, { Schema } from "mongoose";
+import { Types } from 'mongoose';
+
+export type IComment = {
+		user: string;
+		comment: string;
+		time: Date;
+		_id: Types.ObjectId;
+}
 
 // typescript type (can also be an interface)
 export type Blog = {
@@ -13,6 +21,11 @@ export type Blog = {
 		content_title: string;
 };
 
+const commentSchema = new Schema<IComment>({
+	user: { type: String, required: true },
+    comment: { type: String, required: true },
+    time: { type: Date, required: true, default: new Date() },
+})
 
 // mongoose schema 
 const blogSchema = new Schema<Blog>({
@@ -24,6 +37,7 @@ const blogSchema = new Schema<Blog>({
 	    image_alt: { type: String, required: true },
 		content: { type: String, required: true},
 		content_title: { type: String, required: true},
+		comments: [commentSchema]
 })
 
 // defining the collection and model
