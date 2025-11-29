@@ -1,3 +1,9 @@
+import Comment from "../../../components/commentPreview"
+import type { IComment } from "../../../src/database/blogSchema"
+import styles from "../blog_page.module.css";
+
+
+
 type Props = {
     params: Promise<{ slug: string }>
 }
@@ -37,6 +43,15 @@ export default async function Blog({ params }: Props) {
         <main>
 			<h1>{blog.content_title}</h1>
 			<p className = "blog_paragraph">{blog.content}</p>
+			<div className = {styles.commentContainer}>
+			<h1>Comments</h1>
+			 {blog.comments.map((comment: IComment) => 
+				  <Comment // This is how we call the component
+				  key ={comment._id.toString()}
+				  comment = {comment}
+				  />
+					)}
+			</div>
         </main>
     );
 }
