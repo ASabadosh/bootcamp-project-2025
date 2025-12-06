@@ -41,7 +41,7 @@ const blogSchema = new Schema<Blog>({
 })
 
 // defining the collection and model
-const Blog = mongoose.models['blogs'] ||
-    mongoose.model('blogs', blogSchema);
+const Blog = mongoose.models['Blog'] ||
+    mongoose.model('Blog', blogSchema);
 
 export default Blog;
