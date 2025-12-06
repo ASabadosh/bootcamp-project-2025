@@ -20,7 +20,7 @@ import blogSchema from "../../../../src/database/blogSchema"
    what to expect. The actual object structure is determined by our file path:
    /api/blog/[slug]/route.ts creates { params: { slug: "actual-slug-value" } }
 */
-type IParams = {
+export type IParams = {
 		params: Promise<{
         slug: string
     }>
