@@ -13,13 +13,20 @@ export async function POST(req: NextRequest, { params }: IParams) {
 	}
 	
 	// push comment object to document
-	Blog.updateOne(
+    const newComment = {
+    user: body.user,
+    comment: body.comment,
+    time: new Date(),
+  };
+	await Blog.updateOne(
         {
     slug : slug
         }, 
         {
   $push: {
-      comments: {user: body.user, comment: body.comment, time: new Date()}
+      comments: newComment
   }
 })
+  
+    return NextResponse.json(newComment);
 }
