@@ -1,4 +1,4 @@
-import Comment from "../../../components/commentPreview"
+import CommentSection from "../../../components/commentSection"
 import type { IComment } from "../../../src/database/blogSchema"
 import styles from "../blog_page.module.css";
 
@@ -8,7 +8,7 @@ type Props = {
     params: Promise<{ slug: string }>
 }
 
-async function getBlog(slug: string) {
+export async function getBlog(slug: string) {
 	try {
 		// This fetches the blog from an api endpoint that would GET the blog
 		const res = await fetch(`http://localhost:3000/api/Blogs/${slug}`, {
@@ -43,15 +43,11 @@ export default async function Blog({ params }: Props) {
         <main>
 			<h1>{blog.content_title}</h1>
 			<p className = "blog_paragraph">{blog.content}</p>
-			<div className = {styles.commentContainer}>
-			<h1>Comments</h1>
-			 {blog.comments.map((comment: IComment) => 
-				  <Comment // This is how we call the component
-				  key ={comment._id.toString()}
-				  comment = {comment}
-				  />
-					)}
-			</div>
+			<CommentSection 
+
+			comments = {blog.comments}
+			slug = {blog.slug}/>
+
         </main>
     );
 }
