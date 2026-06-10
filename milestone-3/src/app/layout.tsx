@@ -25,8 +25,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" scroll-behavior: smooth>
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+    <html lang="en" className="scroll-smooth">
+      <body className={'${geistSans.variable} ${geistMono.variable}'}>
         <Navbar/>
         {children}
       </body>

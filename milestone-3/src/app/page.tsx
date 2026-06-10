@@ -7,11 +7,11 @@ import Portfolio from "../Sections/Portfolio"
 
 export default function HomePage() {
   return (
-<main>
+<main className="flex flex-col gap-20">
       <About/>
+      <Portfolio/>
       <Blog/>
       <Contact/>
-      <Portfolio/>
 </main>
 );
 }

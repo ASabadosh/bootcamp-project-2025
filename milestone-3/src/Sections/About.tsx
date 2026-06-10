@@ -1,6 +1,6 @@
 export default async function AboutPage() {
 return (
-        <div className="flex gap-20">
+        <div className="flex gap-20 scroll-mt-20" id="about">
 
         <div className="flex flex-col items-center justify-center">
         <h1 className="text-6xl font-bold bg-gradient-to-r from-white to-green-400 text-transparent bg-clip-text pl-5 mb-10">

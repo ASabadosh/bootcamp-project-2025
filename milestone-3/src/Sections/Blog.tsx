@@ -6,14 +6,14 @@ export default async function BlogPage() {
   const blogs = await getBlogs();
   if (blogs == null) {
     return (
-      <div>
+      <div id="blog" className="scroll-mt-20">
         <h1 className="blog">Blog</h1>
         <p>Blogs are unable to be displayed</p>
       </div>
     );
   }
   return (
-    <div>
+    <div id="blog" className="scroll-mt-20">
       <h1 className="blog">Blog</h1>
       <div className={styles.blogContainer}>
         {blogs.map((blog) => (

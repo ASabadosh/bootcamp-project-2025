@@ -6,7 +6,7 @@ export type Portfolio = {
         project_description: string; 
         image: string; //image url
         image_alt: string;
-        link: string; // path for link
+        skills: string[];
 };
 
 
@@ -16,7 +16,7 @@ const portfolioSchema = new Schema<Portfolio>({
         project_description: { type: String, required: true },
         image: { type: String, required: true},
         image_alt: { type: String, required: true },
-        link: { type: String, required: true },
+        skills: { type: [String], required: true },
 })
 
 // defining the collection and model

@@ -1,5 +1,4 @@
 import React from "react";
-import styles from "./navbar.module.css";
 import Link from "next/link";
 
 export default function Navbar() {
@@ -8,19 +7,18 @@ export default function Navbar() {
     // with your navbar code from your earlier milestones
     // NOTE: we use "class" in HTML but React is quirky so we have to 
     // change all the "class" to "className"
-    <header>
-      <nav className={styles.navbar}>    
-    <h1 className={styles.logo}>
-      <a href="/">Avi's Personal Website</a>
+    <header className = {"sticky top-0"}>
+      <nav className={"z-10 flex justify-between items-center bg-nuetral-900 bg-opacity-70 backdrop-blur-md shadow-md py-4 px-4 mx-16"}>    
+    <h1 className={"text-4xl font-bold"}>
+      AVI SABADOSH
     </h1>
-    <ul className={styles.navlist}>
-        <li> <a href="/">Home</a></li>
-        <li><a href="/blog">Blog</a></li>
-        <li><a href="/portfolio">Portfolio</a></li>
-        <li><a href="/resume">Resume</a></li>
-        <li><a href="/contact">Contact</a></li>
+    <ul className={"flex items-center gap-12"}>
+        <li><a href="#about" className="text-[15px] tracking-wider transition-colors hover:text-gray-300">HOME</a></li>
+        <li><a href="#portfolio" className="text-[15px] tracking-wider">PORTFOLIO</a></li>
+        <li><a href="#blog" className="text-[15px] tracking-wider">BLOG</a></li>
       </ul>
+      <a href="#contact" className="block rounded-full bg-[#a7a7a7] text-black border-none py-3 px-8 font-medium transition-color duration-500 hover:bg-white">CONTACT</a>
     </nav> 
-    </header>
+  </header>
   );
 }
