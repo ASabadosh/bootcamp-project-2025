@@ -13,7 +13,7 @@ export default function PortfolioPreview(props: Portfolio) {
       <p className="text-base font-semibold  text-white">
             {props.project_name}
           </p>
-      <p className="text-[14px] leading-[1.75] text-white/55 max-w-135">
+      <p className="text-[14px] leading-[1.75] text-white/55 max-w-135 mt-1">
             {props.project_description}
       </p>
       <div className="flex flex-row gap-1.5 mt-5">
