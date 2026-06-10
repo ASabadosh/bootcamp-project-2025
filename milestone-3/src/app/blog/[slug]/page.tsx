@@ -1,5 +1,5 @@
-import CommentSection from "../../../components/commentSection"
-import type { IComment } from "../../../src/database/blogSchema"
+import CommentSection from "@/components/commentSection"
+import type { IComment } from "@/database/blogSchema"
 import styles from "../blog_page.module.css";
 
 
