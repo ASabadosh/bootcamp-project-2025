@@ -11,10 +11,10 @@ export type IComment = {
 // typescript type (can also be an interface)
 export type Blog = {
 		title: string;
-	  slug: string; 
+	  	slug: string; 
 		date: Date;
 		description: string; // for preview
-	  content: string; // text content for individual blog page
+	  	content: string; // text content for individual blog page
 		comments: IComment[]; // array for comments
 		content_title: string;
 };
@@ -22,7 +22,8 @@ export type Blog = {
 const commentSchema = new Schema<IComment>({
 	user: { type: String, required: true },
     comment: { type: String, required: true },
-    time: { type: Date, required: true, default: new Date() }
+    time: { type: Date, required: true, default: Date.now },
+	_id: { type: Schema.Types.ObjectId, required: true, auto: true }
 })
 
 // mongoose schema 

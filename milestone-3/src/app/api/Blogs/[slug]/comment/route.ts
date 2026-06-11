@@ -14,19 +14,21 @@ export async function POST(req: NextRequest, { params }: IParams) {
 	
 	// push comment object to document
     const newComment = {
-    user: body.user,
-    comment: body.comment,
-    time: new Date(),
-  };
-	await Blog.updateOne(
-        {
-    slug : slug
-        }, 
-        {
-  $push: {
-      comments: newComment
-  }
-})
+        user: body.user,
+        comment: body.comment,
+        time: new Date(),
+    };
+	const updatedBlog = await Blog.findOneAndUpdate(
+        { slug : slug }, 
+        { $push: { comments: newComment } },
+        { new: true }
+    );
+
+    if (!updatedBlog) {
+        return NextResponse.json("Blog not found", { status: 404 });
+    }
+
+    const savedComment = updatedBlog.comments[updatedBlog.comments.length - 1];
   
-    return NextResponse.json(newComment);
+    return NextResponse.json(savedComment);
 }

@@ -28,6 +28,12 @@ function CommentSection({ comments, slug }: CommentSectionProps) {
         });
         
         const newComment: IComment = await res.json();
+
+        if (!res.ok) {
+          alert("Failed to post comment.");
+          return;
+        }
+
         setComments(prev => [...prev, newComment]);
         form.reset();
     }
@@ -38,7 +44,7 @@ function CommentSection({ comments, slug }: CommentSectionProps) {
         <h2 className="text-lg font-medium text-white mb-6">Comments</h2>
         <div className="flex flex-col gap-4 mb-9">
             {current_comments.map(comment => (
-              <Comment key={comment.user} comment={comment} />
+              <Comment key={comment._id.toString()} comment={comment} />
             ))}
         </div>
         <h2 className="text-[15px] font-medium text-white mb-4 border-t border-white/10 pt-6">Leave a comment</h2>
