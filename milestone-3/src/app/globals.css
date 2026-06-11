@@ -10,7 +10,9 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-  --breakpoint-custom: 920px;
+  --breakpoint-custom1: 920px;
+  --breakpoint-custom2: 773px;
+  --breakpoint-custom3: 387px;
 }
 
 body {
