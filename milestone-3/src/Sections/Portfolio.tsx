@@ -16,9 +16,9 @@ export default async function PortfolioPage() {
       <div className="flex flex-col items-left w-full pl-25 mb-10">
       <h1 className="font-bold text-5xl mb-4 text-white">Portfolio</h1>
       <p className="text-[14px] leading-[1.75] text-white/55 max-w-135">
-            I'm a freshman CS student at Cal Poly SLO building my foundation
+            As a freshman CS student at Cal Poly SLO I built a foundation
             in full-stack web development. I've worked on projects ranging from
-            personal sites to nonprofit web work, and I'm actively exploring
+            personal sites to nonprofit web work. I'm actively exploring
             cybersecurity as my long-term direction.
           </p>
       </div>

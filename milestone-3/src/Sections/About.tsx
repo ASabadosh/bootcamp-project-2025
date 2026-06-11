@@ -8,7 +8,7 @@ return (
         </h1>
         <div>
         <p className="text-[20px]"> Hello! I'm <strong>Avi Sabadosh</strong> from Oakland, CA. </p> 
-        <p className="text-[20px]">  I am a freshman studying Computer Science at Cal Poly</p>
+        <p className="text-[20px]">  I am a sophmore studying Computer Science at Cal Poly</p>
         <p className="text-[20px]">- San Luis Obispo</p>
         </div>
         </div>
