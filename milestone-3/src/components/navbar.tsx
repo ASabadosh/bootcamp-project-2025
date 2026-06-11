@@ -13,11 +13,11 @@ export default function Navbar() {
       AVI SABADOSH
     </h1>
     <ul className={"flex items-center gap-12"}>
-        <li><a href="#about" className="text-[15px] tracking-wider transition-colors hover:text-gray-300">HOME</a></li>
-        <li><a href="#portfolio" className="text-[15px] tracking-wider">PORTFOLIO</a></li>
-        <li><a href="#blog" className="text-[15px] tracking-wider">BLOG</a></li>
+        <li><a href="/#about" className="text-[15px] tracking-wider transition-colors hover:text-gray-300">HOME</a></li>
+        <li><a href="/#portfolio" className="text-[15px] tracking-wider">PORTFOLIO</a></li>
+        <li><a href="/#blog" className="text-[15px] tracking-wider">BLOG</a></li>
       </ul>
-      <a href="#contact" className="block rounded-full bg-[#a7a7a7] text-black border-none py-3 px-8 font-medium transition-color duration-500 hover:bg-white">CONTACT</a>
+      <a href="/#contact" className="block rounded-full bg-[#a7a7a7] text-black border-none py-3 px-8 font-medium transition-color duration-500 hover:bg-white">CONTACT</a>
     </nav> 
   </header>
   );
