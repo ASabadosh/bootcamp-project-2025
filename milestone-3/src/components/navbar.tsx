@@ -8,7 +8,7 @@ export default function Navbar() {
     // NOTE: we use "class" in HTML but React is quirky so we have to 
     // change all the "class" to "className"
     <header className = {"sticky top-0"}>
-      <nav className={"z-10 flex justify-between items-center bg-nuetral-900 bg-opacity-70 backdrop-blur-md shadow-md py-4 px-4 mx-16"}>    
+      <nav className={"z-10 flex justify-between items-centerbg-opacity-70 backdrop-blur-md shadow-md py-4 px-4 mx-16"}>    
     <h1 className={"text-4xl font-bold"}>
       AVI SABADOSH
     </h1>

@@ -22,7 +22,7 @@ export default async function PortfolioPage() {
             cybersecurity as my long-term direction.
           </p>
       </div>
-      <div className="grid grid-cols-1 custom:grid-cols-2 gap-5">
+      <div className="grid grid-cols-1 custom1:grid-cols-2 gap-5">
         {portfolios.map((portfolio) => (
           <PortfolioPreview // This is how we call the component
             key={portfolio.image}

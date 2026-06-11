@@ -1,6 +1,7 @@
 import CommentSection from "@/components/commentSection"
 import type { IComment } from "@/database/blogSchema"
-import styles from "../blog_page.module.css";
+import { parseCommentTime } from "@/utils/date";
+import Link from "next/link";
 
 
 
@@ -39,15 +40,18 @@ export default async function Blog({ params }: Props) {
 			</main>
 		);
 	}
+	const date_string = parseCommentTime(blog.date);
 	return(
         <main>
-			<h1>{blog.content_title}</h1>
-			<p className = "blog_paragraph">{blog.content}</p>
-			<CommentSection 
-
+			<div className="flex flex-col mt-20 max-w-xl">
+			<Link className="text-[#85B7EB] text-[13px] hover:underline" href={"/#blog"}>← Back to blog</Link>
+			<p className="text-[11px] text-white/35 tracking-wide mt-8 mb-1"> {date_string} </p>
+			<h1 className="text-[28px] font-medium text-white mb-4 leading-snug">{blog.content_title}</h1>
+			<p className="text-[14px] leading-[1.75] text-white/55 max-w-135 mb-10">{blog.content}</p>
+			<CommentSection
 			comments = {blog.comments}
 			slug = {blog.slug}/>
-
+			</div>
         </main>
     );
 }

@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
-import connectDB from "../../../../../src/database/db"
+import connectDB from "@/database/db"
 import type { IParams } from "../route.ts"
-import Blog from "../../../../../src/database/blogSchema";
+import Blog from "@/database/blogSchema";
 
 export async function POST(req: NextRequest, { params }: IParams) {
     await connectDB()

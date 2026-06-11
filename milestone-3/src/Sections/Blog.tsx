@@ -12,11 +12,11 @@ export default async function BlogPage() {
     );
   }
   return (
-    <div className="scroll-mt-20 w-300 flex flex-col items-center">
+    <div id="blog" className="scroll-mt-20 w-300 flex flex-col items-center">
       <div className="flex flex-col items-left w-full pl-25 mb-10">
       <h1 className="font-bold text-5xl mb-4 text-white">Blog</h1>
       </div>
-      <div className="grid grid-cols-1 custom:grid-cols-2 gap-5 w-full">
+      <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-5 w-full">
         {blogs.map((blog) => (
           <BlogPreview // This is how we call the component
             key={blog.slug}
