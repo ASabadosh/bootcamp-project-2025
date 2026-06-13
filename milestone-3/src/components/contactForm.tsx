@@ -22,11 +22,13 @@ function ContactForm() {
     }
   }
     return(
-    <div className="flex flex-row bg-[#1a1a1a] border border-white/[0.08] rounded-xl p-8">
-        <div className="flex flex-col w-[500px]">
-        <h1 className="contact"> 
+    <div className="flex flex-col bg-[#1a1a1a] border border-white/[0.08] rounded-xl p-8">
+        <div className="">
+        <h2 className="text-[34px] font-medium text-white mb-10 leading-tight"> 
           Let's Talk
-        </h1>
+        </h2>
+        </div>
+        <div className="flex flex-row gap-20">
         <form className="flex flex-col gap-3 w-full" onSubmit={handleSubmit}>
 
         <input type="text" id="name" name="name" placeholder="Name"className="bg-[#222] border border-white/10 rounded-lg px-4 py-2.5 text-[14px] text-white placeholder:text-white/30 outline-none focus:border-white/30 w-full"/>
@@ -38,18 +40,17 @@ function ContactForm() {
         <textarea id="message" name="message" rows={4} placeholder="Message" className="bg-[#222] border border-white/10 rounded-lg px-4 py-2.5 text-[14px] text-white placeholder:text-white/30 outline-none focus:border-white/30 w-full"/>
 
         <div className={styles.input}>
-        <button className = {styles.label} type="submit" placeholder="Send Message">Submit</button>
+        <button type="submit" className="w-full bg-white text-black text-[13px] font-medium py-3 rounded-lg tracking-wide hover:bg-gray-100 transition-colors duration-300 cursor-pointer mt-1">Send Message</button>
         </div>  
 
         </form>
-        </div>
         <div className="flex flex-col w-[500px]">
-        <p>Email</p>
+        <p className="text-[13px] font-medium text-white/45 tracking-[0.08em] uppercase mb-3">Email</p>
         <p>avisabadosh895@gmail.com</p>
-        <p>Github</p>
-        <p>github.com/ASabadosh</p>
-        <p>Resume</p>
-        
+        <p className="text-[13px] font-medium text-white/45 tracking-[0.08em] uppercase mb-3">Github</p>
+        <p className="text-[13px] text-[#85B7EB] hover:underline">github.com/ASabadosh</p>
+        <button className="inline-flex items-center gap-2 bg-[#2a2a2a] border border-white/[0.12] rounded-lg px-4 py-2.5 text-[13px] font-medium text-white hover:border-white/30 transition-colors cursor-pointer">Download Resume</button>
+        </div>
         </div>
     </div>
     )
