@@ -22,35 +22,35 @@ function ContactForm() {
     }
   }
     return(
-    <div>
+    <div className="flex flex-row bg-[#1a1a1a] border border-white/[0.08] rounded-xl p-8">
+        <div className="flex flex-col w-[500px]">
         <h1 className="contact"> 
-          Contact
+          Let's Talk
         </h1>
-        <form className={styles.contact_form} onSubmit={handleSubmit}>
+        <form className="flex flex-col gap-3 w-full" onSubmit={handleSubmit}>
 
-        
-        <div className={styles.input}>
-        <label className = {styles.label} htmlFor="name">Name</label>
-        <input className = {styles.area} type="text" id="name" name="name"/>
-        </div>
-       
-       <input type="hidden" name="time" value={new Date().toString()} />
-        
-        <div className={styles.input}>
-        <label className = {styles.label} htmlFor="email">Email</label>
-        <input className = {styles.area} type="email" id="email" name="email"/>
-        </div>
+        <input type="text" id="name" name="name" placeholder="Name"className="bg-[#222] border border-white/10 rounded-lg px-4 py-2.5 text-[14px] text-white placeholder:text-white/30 outline-none focus:border-white/30 w-full"/>
+
+        <input type="hidden" name="time" value={new Date().toString()} />
+
+        <input type="email" id="email" name="email" placeholder="Email" className="bg-[#222] border border-white/10 rounded-lg px-4 py-2.5 text-[14px] text-white placeholder:text-white/30 outline-none focus:border-white/30 w-full"/>
+
+        <textarea id="message" name="message" rows={4} placeholder="Message" className="bg-[#222] border border-white/10 rounded-lg px-4 py-2.5 text-[14px] text-white placeholder:text-white/30 outline-none focus:border-white/30 w-full"/>
 
         <div className={styles.input}>
-        <label className = {styles.label} htmlFor="message">Message</label>
-        <textarea className = {styles.area} id="message" name="message"/>
-        </div>
-
-        <div className={styles.input}>
-        <button className = {styles.label} type="submit">Submit</button>
-        </div>
+        <button className = {styles.label} type="submit" placeholder="Send Message">Submit</button>
+        </div>  
 
         </form>
+        </div>
+        <div className="flex flex-col w-[500px]">
+        <p>Email</p>
+        <p>avisabadosh895@gmail.com</p>
+        <p>Github</p>
+        <p>github.com/ASabadosh</p>
+        <p>Resume</p>
+        
+        </div>
     </div>
     )
 }
