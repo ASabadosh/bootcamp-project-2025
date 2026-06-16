@@ -27,16 +27,18 @@ function ContactForm() {
           Let's Talk
         </h2>
         </div>
-        <div className="flex flex-row gap-80">
+        <div className="flex flex-row gap-60">
         <form className="flex flex-col gap-3 w-full" onSubmit={handleSubmit}>
 
-        <input type="text" id="name" name="name" placeholder="Name"className="bg-[#222] border border-white/10 rounded-lg px-4 py-2.5 text-[14px] text-white placeholder:text-white/30 outline-none focus:border-white/30 w-full"/>
+        <input type="text" name="name" placeholder="Name"required className="bg-[#222] border border-white/10 rounded-lg px-4 py-2.5 text-[14px] text-white placeholder:text-white/30 outline-none focus:border-white/30 w-full"/>
 
         <input type="hidden" name="time" value={new Date().toString()} />
 
-        <input type="email" id="email" name="email" placeholder="Email" className="bg-[#222] border border-white/10 rounded-lg px-4 py-2.5 text-[14px] text-white placeholder:text-white/30 outline-none focus:border-white/30 w-full"/>
+        <input type="email" name="email" placeholder="Your Email" required className="bg-[#222] border border-white/10 rounded-lg px-4 py-2.5 text-[14px] text-white placeholder:text-white/30 outline-none focus:border-white/30 w-full"/>
 
-        <textarea id="message" name="message" rows={4} placeholder="Message" className="bg-[#222] border border-white/10 rounded-lg px-4 py-2.5 text-[14px] text-white placeholder:text-white/30 outline-none focus:border-white/30 w-full"/>
+        <input type="text" name="title" placeholder="Subject" required className="bg-[#222] border border-white/10 rounded-lg px-4 py-2.5 text-[14px] text-white placeholder:text-white/30 outline-none focus:border-white/30 w-full"/>
+
+        <textarea name="message" rows={4} placeholder="Message" required className="bg-[#222] border border-white/10 rounded-lg px-4 py-2.5 text-[14px] text-white placeholder:text-white/30 outline-none focus:border-white/30 w-full"/>
 
         <button type="submit" className="w-full bg-white text-black text-[13px] font-medium py-3 rounded-lg tracking-wide hover:bg-gray-100 transition-colors duration-300 cursor-pointer mt-1">Send Message</button> 
 
@@ -46,7 +48,7 @@ function ContactForm() {
         <p className="mb-1">avisabadosh895@gmail.com</p>
         <p className="text-[13px] font-medium text-white/45 tracking-[0.08em] uppercase">Github</p>
         <a href="https://github.com/ASabadosh" className="text-[#85B7EB] hover:underline mb-3" target="_blank" rel="noopener noreferrer">github.com/ASabadosh</a>
-        <a href="/Avi_Sabadosh_Resume.pdf" download className= "bg-[#2a2a2a] border border-white/[0.12] rounded-lg px-4 py-2.5 text-[13px] font-bold text-white hover:border-white/30 transition-colors cursor-pointer">Download Resume</a>
+        <a href="/Avi_Sabadosh_Resume.pdf" download className= "bg-[#2a2a2a] border border-white/[0.12] rounded-lg px-4 py-2.5 text-[13px] font-bold text-white hover:border-white/30 transition-colors cursor-pointer text-center">Download Resume</a>
         </div>
         </div>
     </div>
