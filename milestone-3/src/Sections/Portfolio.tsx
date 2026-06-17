@@ -5,9 +5,9 @@ export default async function PortfolioPage() {
   const portfolios = await getPortfolios();
   if (portfolios == null) {
     return (
-      <div id="portfolio" className="scroll-mt-20">
-        <h1 className="portfolio">Portfolio</h1>
-        <p>Portfolio is unable to be displayed</p>
+      <div id="portfolio" className="flex flex-col items-center scroll-mt-20">
+        <h1 className="font-bold text-3xl mb-4 text-white">Portfolio</h1>
+        <p className="text-red-500">Portfolio is unable to be displayed</p>
       </div>
     );
   }

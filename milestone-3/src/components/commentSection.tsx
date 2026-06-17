@@ -50,9 +50,9 @@ function CommentSection({ comments, slug }: CommentSectionProps) {
         <h2 className="text-[15px] font-medium text-white mb-4 border-t border-white/10 pt-6">Leave a comment</h2>
         <form onSubmit={handleSubmit} className="flex flex-col gap-3">
 
-        <input type="text" placeholder="Your name" name="user" className="bg-[#1a1a1a] border border-white/[0.12] rounded-lg px-4 py-2.5 text-[14px] text-white placeholder:text-white/30 outline-none focus:border-white/30 w-full"/>
+        <input type="text" placeholder="Your name" name="user" required className="bg-[#1a1a1a] border border-white/[0.12] rounded-lg px-4 py-2.5 text-[14px] text-white placeholder:text-white/30 outline-none focus:border-white/30 w-full"/>
 
-        <textarea placeholder="Your comment" name="comment" rows={4} className="bg-[#1a1a1a] border border-white/[0.12] rounded-lg px-4 py-2.5 text-[14px] text-white placeholder:text-white/30 outline-none focus:border-white/30 w-full resize-none font-sans"/>
+        <textarea placeholder="Your comment" name="comment" rows={4} required className="bg-[#1a1a1a] border border-white/[0.12] rounded-lg px-4 py-2.5 text-[14px] text-white placeholder:text-white/30 outline-none focus:border-white/30 w-full resize-none font-sans"/>
         
         <button type="submit" className="bg-[#a7a7a7] text-black text-[13px] font-medium px-6 py-2.5 rounded-full self-start tracking-wide hover:bg-white transition-colors duration-300 cursor-pointer">
           Add Comment

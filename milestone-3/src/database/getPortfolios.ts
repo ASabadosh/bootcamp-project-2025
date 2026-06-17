@@ -2,9 +2,8 @@ import connectDB from "./db";
 import Portfolio from "./portfolioSchema";
 
 export default async function getPortfolios(){
-	await connectDB() // function from db.ts before
-
 	try {
+		await connectDB() // function from db.ts before
 			// query for all blogs and sort by date
 	    const portfolios = await Portfolio.find().orFail().sort({ order: 1 });
 			// send a response as the blogs as the message
