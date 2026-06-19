@@ -26,7 +26,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={'${geistSans.variable} ${geistMono.variable}'}>
+      <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <Navbar/>
         {children}
       </body>
