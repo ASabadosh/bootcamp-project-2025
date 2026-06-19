@@ -7,7 +7,7 @@ export default async function BlogPage() {
     return (
       <div className="flex flex-col items-center scroll-mt-20">
         <h1 className="font-bold text-3xl mb-4 text-white">Blog</h1>
-        <p className="text-red-500">Blogs are unable to be displayed</p>
+        <p className="text-red-500">Blogs previews are unable to be displayed</p>
       </div>
     );
   }
