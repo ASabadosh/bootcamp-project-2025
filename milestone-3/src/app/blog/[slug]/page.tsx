@@ -35,9 +35,10 @@ export default async function Blog({ params }: Props) {
 	const blog = await getBlog(slug);
 	if (blog == null){
 		return(
-			<main>
-			<p>Blog is unable to be displayed </p>
-			</main>
+			<div className="flex flex-col items-center scroll-mt-20">
+        	<h1 className="font-bold text-3xl mb-4 text-white">Blog</h1>
+        	<p className="text-red-500">Blog is unable to be displayed</p>
+      		</div>
 		);
 	}
 	const date_string = parseCommentTime(blog.date);
