@@ -1,7 +1,9 @@
 import CommentSection from "@/components/commentSection"
-import type { IComment } from "@/database/blogSchema"
-import { parseCommentTime } from "@/utils/date";
-import Link from "next/link";
+import { parseCommentTime } from "@/utils/date"
+import Link from "next/link"
+import connectDB from "@/database/db"
+import blogSchema from "@/database/blogSchema"
+import { NextResponse } from 'next/server'
 
 
 
@@ -12,12 +14,12 @@ type Props = {
 export async function getBlog(slug: string) {
 	try {
 		// This fetches the blog from an api endpoint that would GET the blog
-		const res = await fetch(`http://localhost:3000/api/Blogs/${slug}`, {
-			cache: "no-store",	
-		})
+		await connectDB()
+		const blog = await blogSchema.findOne({ slug }).orFail()
+		const res = NextResponse.json(blog)
 		// This checks that the GET request was successful
 		if (!res.ok) {
-			throw new Error("Failed to fetch blog");
+			throw new Error("Failed to fetch blog")
 		}
 
 		return res.json();

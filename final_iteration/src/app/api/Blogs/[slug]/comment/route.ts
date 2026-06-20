@@ -1,7 +1,12 @@
 import { NextRequest, NextResponse } from 'next/server'
 import connectDB from "@/database/db"
-import type { IParams } from "../route.ts"
 import Blog from "@/database/blogSchema";
+
+type IParams = {
+        params: Promise<{
+        slug: string
+    }>
+}
 
 export async function POST(req: NextRequest, { params }: IParams) {
     await connectDB()
