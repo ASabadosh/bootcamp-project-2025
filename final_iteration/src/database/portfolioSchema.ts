@@ -8,6 +8,7 @@ export type Portfolio = {
         image_alt: string;
         skills: string[];
         order: number;
+        url: string | null;
 };
 
 
@@ -19,6 +20,7 @@ const portfolioSchema = new Schema<Portfolio>({
         image_alt: { type: String, required: true },
         skills: { type: [String], required: true },
         order: { type: Number, required: true },
+        url: { type: String, default: null},
 })
 
 // defining the collection and model

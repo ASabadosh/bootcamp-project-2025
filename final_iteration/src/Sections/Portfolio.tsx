@@ -32,6 +32,7 @@ export default async function PortfolioPage() {
             image_alt={portfolio.image_alt}
             skills={portfolio.skills}
             order={portfolio.order}
+            url={portfolio.url}
           />
         ))}
       </div>
