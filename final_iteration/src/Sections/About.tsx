@@ -14,8 +14,8 @@ return (
         </div>
 
         <div className="flex items-center justify-center pt-6">
-          <img className="h-[450px]  rounded-2xl object-contain"
-          src="/me.jpg" 
+          <img className="h-[450px] rounded-2xl object-contain"
+          src="/me.jpeg" 
           alt="Image of me"/>
         </div>
 
